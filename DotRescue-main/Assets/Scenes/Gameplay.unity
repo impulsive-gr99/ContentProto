@@ -500,8 +500,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d348e1445c78fda40822022b18c40db2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _minRotateSpeed: 145
-  _maxRotateSpeed: 60
+  _minRotateSpeed: 20
+  _maxRotateSpeed: 10
   _minRotateTime: 0.5
   _maxRotateTime: 2.5
 --- !u!1 &984022310
@@ -723,7 +723,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b14b8f00f7f8ea4eacd12e48800617d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _rotateSpeed: 120
+  _rotateSpeed: 20
   _moveClip: {fileID: 8300000, guid: ca8ccacfffb410d46aad779d0dcb7f63, type: 3}
   _loseClip: {fileID: 8300000, guid: 227c57a948c929b46be8e7b034a24d3a, type: 3}
   _gm: {fileID: 1557563746}
@@ -822,6 +822,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1557563745}
   - component: {fileID: 1557563746}
+  - component: {fileID: 1557563747}
   m_Layer: 0
   m_Name: GameplayManager
   m_TagString: Untagged
@@ -859,6 +860,34 @@ MonoBehaviour:
   _scoreText: {fileID: 984022312}
   _levelSpeed: 050000000a000000140000002800000064000000
   _levelMax: 190000004b000000af000000770100006b030000
+--- !u!114 &1557563747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1557563744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd6eff5dff8b5af43b00d2a0557c97c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  port: 7777
+  udpEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1478295613}
+        m_TargetAssemblyTypeName: Player, Assembly-CSharp
+        m_MethodName: doFlip
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1711558804
 GameObject:
   m_ObjectHideFlags: 0

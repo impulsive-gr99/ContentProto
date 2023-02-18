@@ -8,13 +8,14 @@ public class Player : MonoBehaviour
     [SerializeField] private GameplayManager _gm;
     [SerializeField] private GameObject _explosionPrefab;
 
-    private void Update()
+    private void Update(){
+        // if(Input.GetMouseButtonDown(0)) doFlip();
+    }
+
+    public void doFlip()
     {
-        if(Input.GetMouseButtonDown(0))
-        {
-            SoundManager.Instance.PlaySound(_moveClip);
-            _rotateSpeed *= -1f;
-        }    
+        SoundManager.Instance.PlaySound(_moveClip);
+        _rotateSpeed *= -1f;
     }
 
 
